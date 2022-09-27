@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "styled-components/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Login, Signup } from "../screens";
-// import { theme } from "../theme";
+import React, { useContext } from 'react';
+import { ThemeContext } from 'styled-components/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Login, Signup } from '../screens';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const AuthStack = () => {
   const theme = useContext(ThemeContext);
@@ -12,8 +11,8 @@ const AuthStack = () => {
     <Stack.Navigator
       initialRouteName="Login"
       screenOptions={{
-        headerTitleAlign: "center",
-        cardStyle: { backgroundColor: theme.backgroundCoor },
+        headerTitleAlign: 'center',
+        cardStyle: { backgroundColor: theme.background },
         headerTintColor: theme.headerTintColor,
       }}
     >
